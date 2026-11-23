@@ -1,13 +1,20 @@
 import styles from './Student.module.css'
 import Button from '../Button/Button';
 import { useState } from 'react';
-function Student({id,name,age,isStudent}){
+function Student({id,name,age,isStudent,onLike}){
 
     const [count,setCount]=useState(0)
 
     function handleClick(){
         console.log("msg")
         setCount(count=>count+1)
+
+        onLike();
+        
+    }
+
+    function totalLikes(){
+
     }
 
     return(
